@@ -1,0 +1,106 @@
+.product-card-txt-below {
+    flex-direction: column;
+
+    .card-image {
+        position: relative;
+        overflow: hidden;
+        width: 260px;
+        // border: 1px solid black;
+        // left: 50%;
+        // transform: translateX(-50%);
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .product-card-quickview {
+            position: absolute;
+            bottom: -50px;
+            height: 10px;
+            background-color: $color-theme;
+            color: $color-white;
+            width: 230px;
+            z-index: 1;
+            transition: 0.3s ease-in-out;
+            padding: 1rem;
+            text-align: center;
+        }
+    
+        &:hover .product-card-quickview {
+            height: 65px;
+        }
+    
+        .card-background {
+            position: absolute;
+            bottom: 0;
+            height: 0%;
+            width: 100%;
+            background-color: $color-gray-20;
+            opacity: 0.50;
+            transition: height 0.3s ease-in;
+        }
+
+        &:hover .card-background {
+            height: 100%;
+        }
+
+        .card-image-menu {
+            position: absolute;
+            z-index: 2;
+            top: 100%;
+            right: 1rem;
+            list-style: none;
+            margin: auto;
+            padding: 0.5rem;
+            font-size: 1.25rem;
+            transition: top 0.3s ease-in-out;
+
+            li {
+                font-size: $font-size-13;
+                margin-top: 0.2rem;
+                margin-bottom: 0.2rem;
+
+                a {
+                    color: $color-text-dark;
+
+                    &:hover {
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+
+        &:hover .card-image-menu {
+            top: 10px;
+        }
+    }
+
+    h3 {
+        margin: 0.3rem 0;
+        font-weight: $font-weight-medium;
+        font-size: $font-size-13;
+        color: $color-gray-40;
+    }
+
+    h2 {
+        margin: 0;
+        font-weight: 600;
+        font-size: $font-size-16;
+        color: $color-text-dark;
+    }
+
+    .card-review-stars {
+        margin-top: 0.2rem;
+        color: $color-theme;
+    }
+
+    .card-original-price {
+        margin-top: 0.2rem;
+        font-weight: 600;
+        font-size: $font-size-18;
+    }
+
+
+
+}
