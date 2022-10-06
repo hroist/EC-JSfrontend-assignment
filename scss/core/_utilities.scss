@@ -19,7 +19,7 @@ a {
 }
 
 p {
-    margin: 0.5rem;
+    margin: 0.5rem 0;
 }
 
 .container {
@@ -46,20 +46,64 @@ p {
     }
 }
 
-.c-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.button-theme-color {
+    position: relative;
+    background-color: $color-theme;
+    color: $color-white;
+    font-weight: 600;
+    font-size: 1em;
+    font-family: $font-poppins;
+    padding: 0.8rem 2rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    
+    &:before {
+        content:'';
+        position: absolute;
+        border-width: 2px;
+        border-style: solid;
+        border-image: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10%, rgba(255,115,115,1) 10%, rgba(255,115,115,1) 50%, rgba(255,115,115,1) 90%, rgba(255,255,255,1) 90%, rgba(255,255,255,1) 100%) 1;
+        height: calc(100% - 18px);
+        width: calc(100% - 18px);
+        z-index: 1;
+        top: 7px;
+        left: 7px;
+    }
+
+    &:hover {
+        color: $color-dark;
+    }
 }
 
-.sb-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+.button-theme-dark {
+    position: relative;
+    background-color: $color-dark;
+    color: $color-white;
+    font-weight: 600;
+    font-size: 1em;
+    font-family: $font-poppins;
+    padding: 0.8rem 2rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    
+    &:before {
+        content:'';
+        position: absolute;
+        border-width: 2px;
+        border-style: solid;
+        border-image: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10%, rgba(35,38,42,1) 10%, rgba(35,38,42,1) 50%, rgba(35,38,42,1) 90%, rgba(255,255,255,1) 90%, rgba(255,255,255,1) 100%) 1;
+        height: calc(100% - 18px);
+        width: calc(100% - 18px);
+        z-index: 1;
+        top: 7px;
+        left: 7px;    
+    }
 
-.position-absolute {
-    position: absolute;
+    &:hover {
+        color: $color-theme;
+    }
 }
 
 .badge {
@@ -81,4 +125,22 @@ p {
             display: none;
         }
 
-  }
+}
+
+.c-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sb-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+
