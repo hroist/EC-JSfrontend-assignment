@@ -1,0 +1,84 @@
+html, body {
+    font-family: $font-poppins;
+    font-size: $font-size-16;
+    line-height: 1.5;
+    color: $color-text-dark;
+    margin: 0;
+    padding: 0;
+    background-color: $color-white;
+}
+
+a {
+    color: $color-dark;
+    transition: 0.15s ease-in-out;
+    text-decoration: none;
+
+    &:hover {
+        color: $color-theme;
+    }
+}
+
+p {
+    margin: 0.5rem;
+}
+
+.container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @include sm {
+        max-width: $breakpoint-sm-max-width;
+    }
+    @include md {
+        max-width: $breakpoint-md-max-width;
+    }
+    @include lg {
+        max-width: $breakpoint-lg-max-width;
+    }
+    @include xl {
+        max-width: $breakpoint-xl-max-width;
+    }
+    @include xxl {
+        max-width: $breakpoint-xxl-max-width;
+    }
+}
+
+.c-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sb-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.badge {
+    width: 10px;
+    aspect-ratio: 1;
+    padding: 0.3em 0.3em 0.25em 0.3em;
+    font-size: $font-size-11;
+    font-weight: $font-weight-bold;
+    color: $color-white;
+    border-radius: 50%;
+    background-color: $color-theme;
+    display: inline-block;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+
+        &:empty {
+            display: none;
+        }
+
+  }
