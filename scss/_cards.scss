@@ -5,9 +5,6 @@
         position: relative;
         overflow: hidden;
         width: 240px;
-        // border: 1px solid black;
-        // left: 50%;
-        // transform: translateX(-50%);
 
         img {
             width: 100%;
@@ -20,7 +17,7 @@
             height: 1px;
             background-color: $color-theme;
             color: $color-white;
-            width: 210px;
+            width: 220px;
             z-index: 1;
             transition: 0.3s ease-in-out;
             padding: 1rem;
@@ -118,7 +115,7 @@
             width: 150px;
 
             .product-card-quickview {
-                width: 120px;
+                width: 130px;
             }
 
             .card-image-menu {
@@ -128,3 +125,39 @@
 
     }
 }
+
+
+.specialty-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 1rem;
+
+    .specialty-card-text {
+        background-color: $color-white;
+        width: 150px;
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        padding-left: 2rem;
+    }
+
+    img {
+        width: 170px;
+        height: 140px;
+        object-fit: cover;
+    }
+
+    h3 {
+        font-weight: $font-weight-medium;
+    }
+
+    a {
+        text-decoration: underline;
+        text-decoration-color: $color-gray-30;
+        text-decoration-thickness: 2px;
+        font-weight: $font-weight-bold;
+    }
+}
+

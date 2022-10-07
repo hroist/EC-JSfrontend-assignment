@@ -117,6 +117,36 @@ p {
     }
 }
 
+.button-theme-white {
+    position: relative;
+    background-color: $color-white;
+    color: $color-text-dark;
+    font-weight: 600;
+    font-size: 1em;
+    font-family: $font-poppins;
+    padding: 0.8rem 2rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    
+    &:before {
+        content:'';
+        position: absolute;
+        border-width: 2px;
+        border-style: solid;
+        border-image: linear-gradient(135deg, rgba(34,37,41,1) 0%, rgba(34,37,41,1) 10%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 90%, rgba(34,37,41,1) 90%, rgba(34,37,41,1) 100%) 1;
+        height: calc(100% - 18px);
+        width: calc(100% - 18px);
+        z-index: 1;
+        top: 7px;
+        left: 7px;    
+    }
+
+    &:hover {
+        color: $color-theme;
+    }
+}
+
 .menu-link-circle {
     position: relative;
     border-radius: 50%;
