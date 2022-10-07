@@ -123,4 +123,17 @@
         margin-bottom: 40px;
     }
 }
+.featured-products {
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
 
+
+    .featured-product-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;          
+    }
+}

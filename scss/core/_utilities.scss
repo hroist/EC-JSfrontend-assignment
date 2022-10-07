@@ -22,6 +22,17 @@ p {
     margin: 0.5rem 0;
 }
 
+.section-title {
+    font-size: $font-size-20;
+    color: $color-text-dark;
+    font-weight: $font-weight-bold;
+    margin-bottom: 1rem;
+}
+
+.txt-c {
+    text-align: center;
+}
+
 .container {
     max-width: 100%;
     margin-left: auto;
@@ -146,6 +157,12 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.l-content {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
 }
 
 .sb-content {
