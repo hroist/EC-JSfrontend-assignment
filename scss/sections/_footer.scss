@@ -1,0 +1,15 @@
+.footer {
+    background-color: $color-gray-10;
+    padding: 1rem 0;
+
+    .social-media {
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    p {
+        font-size: $font-size-14;
+        color: $color-gray-40;
+        margin: 1rem 0;
+    }
+}

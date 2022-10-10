@@ -57,6 +57,14 @@ p {
     }
 }
 
+.container-small {
+    max-width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 .button-theme-color {
     position: relative;
     background-color: $color-theme;
@@ -147,6 +155,23 @@ p {
     }
 }
 
+.button-forms {
+    background-color: $color-theme;
+    color: $color-white;
+    font-weight: 600;
+    font-size: 1em;
+    font-family: $font-poppins;
+    padding: 0.8rem 2rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    margin: 1rem 0;
+    
+    &:hover {
+        color: $color-dark;
+    }
+}
+
 .menu-link-circle {
     position: relative;
     border-radius: 50%;
@@ -205,4 +230,10 @@ p {
     position: absolute;
 }
 
-
+.invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+    color: #dc3545;
+}

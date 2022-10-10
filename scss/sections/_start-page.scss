@@ -67,7 +67,7 @@
                 }
             }
         }
-    }
+}
 
 .main-banner > .container {
     height: 370px;
@@ -125,17 +125,17 @@
 }
 
 .featured-products {
-    margin-left: auto;
-    margin-right: auto;
-    width: 55%;
+    margin-bottom: 2rem;
 
 
     .featured-product-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+       justify-content: center;
+        // grid-template-columns: repeat(4, 1fr);
+        // grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(210px,240px));
         grid-column-gap: 1rem;
-        grid-row-gap: 1rem;          
+        grid-row-gap: 1rem;
     }
 }
 
@@ -214,5 +214,111 @@
         padding: 1rem 2rem;
         gap: 1rem;
     
+    }
+}
+
+.product-display {
+    margin: 1rem;
+    border: 1px solid black;
+
+    .product-grid-large {
+        border: 1px solid black;
+
+        display: grid;
+        grid-auto-columns: repeat(6, 1fr);
+        grid-auto-rows: repeat(4, 1fr);
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        justify-content: center;
+        
+        #large-image-upper      { 
+            grid-area: 1 / 1 / 3 / 3; 
+            height: 300px;
+            background-image: url(/images/placeholders/grid-large-placeholder.png);
+            background-size: conatin;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #small-image-upper-1    { grid-area: 3 / 1 / 4 / 2; }
+        #small-image-upper-2    { grid-area: 3 / 2 / 4 / 3; }
+        #small-image-upper-3    { grid-area: 4 / 1 / 5 / 2; }
+        #small-image-upper-4    { grid-area: 4 / 2 / 5 / 3; }
+        #large-image-lower      { 
+            grid-area: 5 / 1 / 7 / 3;
+            background-image: url(/images/placeholders/grid-large-placeholder.png);
+            background-size: contain;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #small-image-lower-1    { grid-area: 7 / 1 / 8 / 2; }
+        #small-image-lower-2    { grid-area: 7 / 2 / 8 / 3; }
+        #small-image-lower-3    { grid-area: 8 / 1 / 9 / 2; }
+        #small-image-lower-4    { grid-area: 8 / 2 / 9 / 3; }
+
+
+        @include md {
+                display: grid;
+                grid-auto-columns: repeat(2, 1fr);
+                grid-auto-rows: repeat(8, 1fr);
+                
+                #large-image-upper { 
+                    grid-area: 1 / 1 / 3 / 4; 
+                    width: 100%;
+                    height: 100%;       
+                }
+                #small-image-upper-1 { grid-area: 1 / 4 / 2 / 5; }
+                #small-image-upper-2 { grid-area: 1 / 5 / 2 / 6; }
+                #small-image-upper-3 { grid-area: 2 / 4 / 3 / 5; }
+                #small-image-upper-4 { grid-area: 2 / 5 / 3 / 6; }
+                #small-image-lower-1 { grid-area: 3 / 2 / 4 / 3; }
+                #small-image-lower-2 { grid-area: 3 / 3 / 4 / 4; }
+                #small-image-lower-3 { grid-area: 4 / 2 / 5 / 3; }
+                #small-image-lower-4 { grid-area: 4 / 3 / 5 / 4; }
+                #large-image-lower { 
+                    grid-area: 3 / 4 / 5 / 7; 
+                    width: 100%;
+                    height: 100%;
+
+                }
+        }
+    }
+}
+
+.banner-small {
+    margin: 2rem 0;
+    
+    .banner-content {
+        background-color: $color-gray-40;
+        flex-direction: column;
+        padding: 2rem;
+        color: $color-white;
+
+        h1 {
+            font-size: $font-size-35;
+            font-weight: $font-weight-bold;
+        }
+
+        h2 {
+            font-weight: $font-weight-bold;
+            font-size: $font-size-18;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.product-columns {
+    .product-columns-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        grid-auto-flow: column;
+        grid-auto-rows: 20px 100%;
     }
 }
