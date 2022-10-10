@@ -63,22 +63,22 @@
     <section class="contact-us">
         <div class="container-small">
             <h1 class="contact-title">Come in Contact with us</h1>
-            <form id="contactForm">
-                <div class="sb-content">
-                    <label for="contact_name" hidden>Your name <span class="required">*</span></label>
-                    <input id="contact_name" type="text" placeholder="Your name" required>
-                    <div class="invalid-feedback">Please enter your name.</div>
+            <form onsubmit="onSubmit(event)" novalidate>
+                <div>
+                    <label id="contactName-label" for="contact-name" hidden>Your name</label>
+                    <input id="contactName" type="text" class="form-control" onkeyup="validate(event)" placeholder="Your name" required data-required-min="2">
+                    <div id="contactName-error" class="invalid-feedback">Please enter your name.</div>
 
-                    <label for="contact_email" hidden>E-mail <span class="required">*</span></label>
-                    <input id="contact_email" type="email" placeholder="Your e-mail" required>
-                    <div class="invalid-feedback">Please enter your e-mail address.</div>
+                    <label id="contactEmail-label" for="contact-email" hidden>Your e-mail</label>
+                    <input id="contactEmail" type="email" class="form-control" onkeyup="validate(event)" placeholder="Your e-mail" required data-required-min="5">
+                    <div id="contactEmail-error" class="invalid-feedback">Please enter your e-mail address.</div>
                 </div>
-                <div class="sb-content">
-                    <label for="contact_comment" hidden>Comments <span class="required">*</span></label>
-                    <textarea id="contact_comment" placeholder="Comments" required></textarea>
-                    <div class="invalid-feedback">Please enter a comment.</div>
+                <div>
+                    <label id="contactMessage-label" for="contact-message" hidden>Message</label>
+                    <textarea id="contactMessage" name="contactMessage" class="form-control" onkeyup="validate(event)" placeholder="Message" required data-required-min="5"></textarea>
+                    <div id="contactMessage-error" class="invalid-feedback">Please enter a message.</div>
                 </div>
-                <button class="button-forms">POST COMMENT</button>
+                <button type="submit" class="button-forms">POST COMMENT</button>
             </form>
         </div>
     </section>
