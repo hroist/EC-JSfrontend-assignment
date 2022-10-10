@@ -11,10 +11,18 @@
 .contact-us {
     margin-top: 4rem;
     margin-bottom: 2rem;
+
+    .contact-form-box {
+        display: block;
+        
+    }
     
-    form input[type=text],
-    form input[type=email] {
-        width: 45%;
+    input[type=text],
+    input[type=email] {
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
         padding: 0.8rem;
         margin: 0.5rem 0;
         border: 1px solid $color-gray-20;
@@ -25,13 +33,24 @@
         }
     }
 
-    form textarea {
+    textarea {
         width: 100%;
         height: 90px;
         padding: 0.8rem;
         margin: 0.3rem 0;
         border: 1px solid $color-gray-20;
         font-family: $font-poppins;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    @include md {
+        .contact-form-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
     }
 }
 
