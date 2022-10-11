@@ -112,4 +112,13 @@ const isEmailValid = (email) => {
 
 // Product details page
 
+const toggleProductDetails = (event) => {
+    let thisId = event.target.id
+    let productDetailsTexts = document.querySelectorAll(`[id^="product-id-"][id$="text"]`)
+    productDetailsTexts.forEach(removeActive)
+    function removeActive(item) {
+        item.classList.remove("active")
+    }
+    document.getElementById(`${thisId}-text`).classList.add('active')
+}
 
