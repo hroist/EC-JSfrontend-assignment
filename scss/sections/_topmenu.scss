@@ -1,8 +1,10 @@
 .top-menu {
-    background: transparent;
-    // background: linear-gradient(90deg, rgba(230,230,230,1) 0%, rgba(245,245,245,1) 100%);
     margin: 0;
     padding: 1rem 0;
+
+    .container {
+        position: relative;
+    }
 
     .logo {
         font-size: $font-size-35;
@@ -73,7 +75,7 @@
         position: relative;
         opacity: 0;
         visibility: hidden;
-        font-size: $font-size-24;
+        font-size: $font-size-35;
         color: $color-gray-40;
 
         &.active {
@@ -95,7 +97,7 @@
 
     .searchBox {
         position: absolute;
-        right: -110%;
+        right: -200%;
         width: 98%;
         display: flex;
         align-items: center;
@@ -113,11 +115,12 @@
 
         &.active {
             right: -20px;
+
         }
 
         @include md {
             position: absolute;
-            width: 95%;
+            width: 100%;
     
             &.active {
                 right: 0px;
@@ -130,7 +133,6 @@
         visibility: visible;
         left: calc(100% - 110px);
         top: 50px;
-        padding-top: 2rem;
         text-align: end;
         height: calc(100vh - 50px);
         // width: 100%;
