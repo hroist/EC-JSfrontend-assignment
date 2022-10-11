@@ -1,3 +1,5 @@
+// Top menu navbar and search
+
 let searchBtn = document.querySelector('.searchBtn')
 let closeBtn = document.querySelector('.closeBtn')
 let searchBox = document.querySelector('.searchBox')
@@ -20,6 +22,8 @@ closeBtn.onclick = function () {
 navbarToggle.onclick = function () {
     topMenu.classList.toggle('open')
 }
+
+// Contact page
 
 const onSubmit = event => {
     event.preventDefault()
@@ -105,3 +109,5 @@ const isEmailValid = (email) => {
 
     return false
 }
+
+// Product details page

@@ -208,16 +208,17 @@
         border-bottom: 1px solid $color-gray-30;
 
 
-        a {
+        .product-details-nav-item {
             color: $color-gray-40;
             font-weight: $font-weight-medium;
+            cursor: pointer;
 
             &:hover {
                 color: $color-theme;
                 text-decoration: underline;
                 text-decoration-color: $color-theme;
                 text-decoration-thickness: 2px;
-                text-underline-offset: 0.8rem;
+                text-underline-offset: 0.7rem;
             }
         }
         
