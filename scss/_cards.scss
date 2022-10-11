@@ -1,14 +1,25 @@
+.card-review-stars {
+    margin-top: 0.2rem;
+    color: $color-theme;
+}
+
+.card-original-price {
+    margin-top: 0.2rem;
+    font-weight: 600;
+    font-size: $font-size-18;
+}
+
 .product-card {
     flex-direction: column;
 
     .card-image {
         position: relative;
         overflow: hidden;
-        width: 240px;
+        width: 210px;
 
         img {
             width: 100%;
-            object-fit: cover;
+            object-fit: contain;
         }
 
         .product-card-quickview {
@@ -17,7 +28,7 @@
             height: 1px;
             background-color: $color-theme;
             color: $color-white;
-            width: 220px;
+            width: 190px;
             z-index: 1;
             transition: 0.3s ease-in-out;
             padding: 1rem;
@@ -69,7 +80,7 @@
         }
 
         &:hover .card-image-menu {
-            top: 10px;
+            top: 5px;
         }
     }
 
@@ -92,17 +103,6 @@
             font-size: $font-size-16;
             color: $color-text-dark;
         }
-    
-        .card-review-stars {
-            margin-top: 0.2rem;
-            color: $color-theme;
-        }
-    
-        .card-original-price {
-            margin-top: 0.2rem;
-            font-weight: 600;
-            font-size: $font-size-18;
-        }
     }
 
     &.text-right {
@@ -112,10 +112,10 @@
         gap: 1rem;
 
         .card-image {
-            width: 150px;
+            width: 170px;
 
             .product-card-quickview {
-                width: 130px;
+                width: 150px;
             }
 
             .card-image-menu {
@@ -125,7 +125,6 @@
 
     }
 }
-
 
 .specialty-card {
     display: grid;
@@ -159,5 +158,56 @@
         text-decoration-thickness: 2px;
         font-weight: $font-weight-bold;
     }
+}
+
+.product-details-card {
+    color: $color-gray-40;
+
+    .product-details-images {
+        flex: 1;
+    }
+
+    .product-details-content {
+        flex: 1;
+
+        h1 {
+            margin: 0;
+            font-size: $font-size-20;
+            color: $color-text-dark;
+        }
+    }
+
+    .product-details-grid {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+
+        .share-links {
+            font-size: $font-size-13;
+            color: $color-gray-10;
+        }
+    }
+
+    .product-details-nav-list {
+        list-style: none;
+        padding-left: 0;
+        padding-bottom: 0.4rem;
+        border-bottom: 1px solid $color-gray-30;
+
+
+        a {
+            color: $color-gray-40;
+            font-weight: $font-weight-medium;
+
+            &:hover {
+                color: $color-theme;
+                text-decoration: underline;
+                text-decoration-color: $color-theme;
+                text-decoration-thickness: 2px;
+                text-underline-offset: 0.8rem;
+            }
+        }
+        
+    }
+
 }
 
