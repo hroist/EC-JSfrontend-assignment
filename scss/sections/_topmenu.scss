@@ -4,29 +4,49 @@
     margin: 0;
     padding: 1rem 0;
 
-
     .logo {
         font-size: $font-size-35;
         font-weight: $font-weight-bold;
         color: $color-dark;
     }
     .navbar {
-        display: none;
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        left: 100%;
 
         .nav-item {
+            display: block;
             margin: 0 0.5rem;
             font-size: $font-size-16;
             font-weight: $font-weight-medium;
+
+            @include md {
+                display: inline;
+            }
         }
 
         @include md {
-            display: inherit;
+            position: static;
+            opacity: 1;
+            visibility: visible;
+        }
+
+    }
+
+    .navbarToggle {
+        position: relative;
+        
+
+        @include md {
+            display: none;
         }
     }
 
     .menu-links {
         gap: 1rem;
         line-height: 0;
+        padding-right: 2rem;
 
         .badge {
             top: -0.2rem;
@@ -39,4 +59,83 @@
         }
         
     }
+
+    .search {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    .closeBtn {
+        position: relative;
+        opacity: 0;
+        visibility: hidden;
+        font-size: $font-size-24;
+        color: $color-gray-40;
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            left: -6px;
+        }
+    }
+
+    .searchBtn {
+        position: relative;
+        left: 9px;
+        transition: 0.5s ease-in-out;
+
+        &.active {
+            z-index: -2;
+        }
+    }
+
+    .searchBox {
+        position: absolute;
+        right: -110%;
+        width: 98%;
+        display: flex;
+        align-items: center;
+        padding: 0 2rem;
+        transition: 0.5s ease-in-out;
+
+        input {
+            width: 100%;
+            border: none;
+            outline: none;
+            height: 50px;
+            border-bottom: 1px solid $color-gray-40;
+            font-size: $font-size-16;
+        }
+
+        &.active {
+            right: -20px;
+        }
+
+        @include md {
+            position: absolute;
+            width: 95%;
+    
+            &.active {
+                right: 0px;
+            }
+        }
+    }
+
+    &.open .navbar{
+        opacity: 1;
+        visibility: visible;
+        left: calc(100% - 110px);
+        top: 50px;
+        padding-top: 2rem;
+        text-align: end;
+        height: calc(100vh - 50px);
+        // width: 100%;
+        background-color: $color-white;
+    }
+
 }
+

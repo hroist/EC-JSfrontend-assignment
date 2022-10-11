@@ -30,6 +30,22 @@ p {
     margin-bottom: 1rem;
 }
 
+.collapse-sm {
+    display: none;
+
+    @include sm {
+        display: inherit;
+    }
+}
+
+.collapse-md {
+    display: none;
+
+    @include md {
+        display: inherit;
+    }
+}
+
 .txt-c {
     text-align: center;
 }
@@ -184,7 +200,7 @@ p {
     aspect-ratio: 1;
     background-color: $color-white;
     box-shadow: 0px 0px 15px 1px $color-gray-20;
-    font-size: $font-size-14;
+    font-size: $font-size-18;
 
     &:hover {
         background-color: $color-dark;
