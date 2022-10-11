@@ -12,10 +12,14 @@
 .product-card {
     flex-direction: column;
 
+    .menu-link-circle {
+        height: 25px;
+    }
+
     .card-image {
         position: relative;
         overflow: hidden;
-        width: 210px;
+        width: 160px;
 
         img {
             width: 100%;
@@ -28,7 +32,7 @@
             // height: 1px;
             background-color: $color-theme;
             color: $color-white;
-            width: 187px;
+            width: 137px;
             z-index: 1;
             transition: 0.3s ease-in-out;
             padding: 1rem;
@@ -79,8 +83,7 @@
             transition: top 0.3s ease-in-out;
 
             li {
-                font-size: $font-size-13;
-                margin-top: 0.3rem;
+                font-size: $font-size-11;
                 margin-bottom: 0.3rem;
 
                 a {
@@ -94,7 +97,7 @@
         }
 
         &:hover .card-image-menu {
-            top: 5px;
+            top: 0px;
         }
     }
 
@@ -126,10 +129,10 @@
         gap: 1rem;
 
         .card-image {
-            width: 170px;
+            width: 150px;
 
             .product-card-quickview {
-                width: 147px;
+                width: 127px;
             }
 
             .card-image-menu {

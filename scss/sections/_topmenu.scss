@@ -4,6 +4,8 @@
 
     .container {
         position: relative;
+        padding: 1rem;
+        overflow: hidden;
     }
 
     .logo {
@@ -11,6 +13,7 @@
         font-weight: $font-weight-bold;
         color: $color-dark;
     }
+
     .navbar {
         position: absolute;
         opacity: 0;
@@ -19,7 +22,7 @@
 
         .nav-item {
             display: block;
-            margin: 0 0.5rem;
+            margin: 0.5rem 0.5rem;
             font-size: $font-size-16;
             font-weight: $font-weight-medium;
 
@@ -35,6 +38,7 @@
         }
 
     }
+    
 
     .navbarToggle {
         position: relative;
@@ -96,11 +100,11 @@
 
     .searchBox {
         position: absolute;
-        right: -200%;
+        right: -120%;
         width: 98%;
         display: flex;
         align-items: center;
-        padding: 0 2rem;
+        padding: 0 3rem;
         transition: 0.5s ease-in-out;
 
         input {
@@ -113,7 +117,7 @@
         }
 
         &.active {
-            right: -20px;
+            right: -30px;
 
         }
 
@@ -122,21 +126,27 @@
             width: 100%;
     
             &.active {
-                right: 0px;
+                right: -45px;
             }
         }
     }
 
-    &.open .navbar{
-        opacity: 1;
-        visibility: visible;
-        left: calc(100% - 110px);
-        top: 50px;
-        text-align: end;
-        height: calc(100vh - 50px);
-        // width: 100%;
-        background-color: $color-white;
-    }
+    &.open {
 
+        .container {
+            overflow: visible;
+
+            .navbar{
+                opacity: 1;
+                visibility: visible;
+                left: calc(100% - 110px);
+                top: 50px;
+                text-align: end;
+                height: calc(100vh - 50px);
+                // width: 100%;
+                background-color: $color-white;
+            }
+        }
+    }
 }
 

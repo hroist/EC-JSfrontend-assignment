@@ -111,3 +111,5 @@ const isEmailValid = (email) => {
 }
 
 // Product details page
+
+
