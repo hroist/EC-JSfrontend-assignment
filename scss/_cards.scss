@@ -277,8 +277,8 @@
         padding-left: 0;
         padding-bottom: 0.4rem;
         border-bottom: 1px solid $color-gray-30;
-
-
+        flex-wrap: wrap;
+        
         .product-details-nav-item {
             color: $color-gray-40;
             font-weight: $font-weight-medium;
